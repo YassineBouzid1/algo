@@ -1,0 +1,29 @@
+ALGORITHM algo
+VAR
+    str : STRING
+    nb_char : INTEGER := 0;
+    nb_world : INTEGER := 0;
+    nb_vow : INTEGER := 0;
+    c : CHAR := ""
+BEGIN
+    Write("give me a sentence")
+    Read(str)
+    str := "hello world.";
+    
+    FOR i FROM 0 TO str.length-1 STEP 1  DO
+        IF (str[i] = "a") THEN
+            nb_world := + 1;
+        END_IF
+        IF (str[i] = "a" OR str[i] = "e" OR str[i] = "i" OR str[i]) THEN
+            nb_vow := nb_vow + 1;
+        END_IF
+    END_FOR
+
+    WHILE (c <> ".") DO
+        Read(c);
+        nb_char := nb_char + 1;
+        IF (c = " ") THEN
+            nb_world := nb_world + 1;
+        END_IF
+    END_WHILE
+END
